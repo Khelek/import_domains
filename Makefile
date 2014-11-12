@@ -1,7 +1,8 @@
 all: install import
 
 install:
-	bundle
+	git pull origin master
+	bundle install
 
 import:
 	BUNDLE_GEMFILE=data_load/Gemfile ruby import_domains.rb
